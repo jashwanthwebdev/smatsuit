@@ -1,6 +1,6 @@
 CODEIGNITER REST API'S
 
-
+1. PLEASE FIND THE SCREEN SHOT OF CREATED API'S END POINTS --- Create_contact, mobile.jpeg,update.jpeg,del.jpeg,search.jpeg
 
 MYSQL DATABASE
 ---------------------------------------------------------------------------------------------------------
