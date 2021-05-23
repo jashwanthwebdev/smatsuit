@@ -1,70 +1,80 @@
-###################
-What is CodeIgniter
-###################
+CODEIGNITER REST API'S
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
 
-*******************
-Release Information
-*******************
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+MYSQL DATABASE
+---------------------------------------------------------------------------------------------------------
 
-**************************
-Changelog and New Features
-**************************
+-- phpMyAdmin SQL Dump
+-- version 5.1.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: May 23, 2021 at 04:08 PM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 7.3.27
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
-*******************
-Server Requirements
-*******************
 
-PHP version 5.6 or newer is recommended.
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+--
+-- Database: `smatbotcontact`
+--
 
-************
-Installation
-************
+-- --------------------------------------------------------
 
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
+--
+-- Table structure for table `contact_tb`
+--
 
-*******
-License
-*******
+CREATE TABLE `contact_tb` (
+  `contact_id` int(11) NOT NULL,
+  `first_name` varchar(100) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `mobile_number` varchar(10) NOT NULL,
+  `data_store` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
+--
+-- Dumping data for table `contact_tb`
+--
 
-*********
-Resources
-*********
+INSERT INTO `contact_tb` (`contact_id`, `first_name`, `last_name`, `email`, `mobile_number`, `data_store`) VALUES
+(2, 'Jashwanth', 'Kumar', 'aervajashwanth@yahoo.com', '8121244826', 'hyd'),
+(4, 'Jashwanth', 'Kumar', 'aervajashwanth@gmail.com', '9032771453', 'Hyderabad'),
+(6, 'Jashwanth', 'kumar', 'aervajashwanth@gmail.com', '9032771453', 'hyderabad'),
+(7, 'Jashwanth Kumar', 'kumar', 'aervajashwanth@gmail.com', '9032771453', 'hyderabad'),
+(8, 'AVN', 'kumar', 'aervajashwanth@yahoo.com', '8121244826', 'Sec');
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
+--
+-- Indexes for dumped tables
+--
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
+--
+-- Indexes for table `contact_tb`
+--
+ALTER TABLE `contact_tb`
+  ADD PRIMARY KEY (`contact_id`);
 
-***************
-Acknowledgement
-***************
+--
+-- AUTO_INCREMENT for dumped tables
+--
 
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+--
+-- AUTO_INCREMENT for table `contact_tb`
+--
+ALTER TABLE `contact_tb`
+  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
